@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobTech.Mobile.Pages.AddAED">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Label Text="Add AED" Grid.Row="0"></Label>
+                <Entry x:Name="aedName" Placeholder="Name"  Grid.Row="1"></Entry>
+                <Entry x:Name="aedDesc" Placeholder="Description" Grid.Row="2"></Entry>
+                <Entry x:Name="lon" Placeholder="Longitude" Grid.Row="3"></Entry>
+                <Entry x:Name="lat" Placeholder="Latitude" Grid.Row="4"></Entry>
+                <ActivityIndicator x:Name="load" IsRunning="false" Grid.Row="5"></ActivityIndicator>
+                <Image x:Name="PhotoImage" Aspect="AspectFill" Grid.Row="6" Grid.RowSpan="2"></Image>
+                <Button Text="Position" Clicked="CalculatePosition" Grid.Row="8"></Button>
+                <Button Clicked="SaveAED"  Text="save" Grid.Row="9"></Button>
+                <Button Clicked="CameraButton" x:Name="takephoto"  Text="Take photo" Grid.Row="10"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

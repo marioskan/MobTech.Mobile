@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobTech.Mobile"
+             x:Class="MobTech.Mobile.Pages.Login">
+    <ContentPage.Content>
+        <Grid Margin="16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="0">
+                <Label Text="Login" ></Label>
+                <Entry x:Name="l_email"  Placeholder="Email"></Entry>
+                <Entry x:Name="l_password"  Placeholder="Password" IsPassword="True"></Entry>
+            </StackLayout>
+            <StackLayout Grid.Row="1">
+                <Label HorizontalOptions="CenterAndExpand" Text="Or" ></Label>
+                <Label Text="Register" ></Label>
+                <Entry x:Name="r_email"  Placeholder="Email"></Entry>
+                <Entry x:Name="r_password"  Placeholder="Password" IsPassword="True"></Entry>
+                <Label x:Name="ui_result" TextColor="Red"></Label>
+            </StackLayout>
+            <StackLayout Grid.Row="2">
+                <Button Text="Authenticate" Clicked="AuthenticateButton"></Button>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
